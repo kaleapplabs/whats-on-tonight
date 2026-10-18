@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Support – What's On Tonight</title><meta name="description" content="Help and contact for What's On Tonight."><link rel="stylesheet" href="style.css"></head><body>
+<header class="site"><a class="brand" href="index.html">What's On Tonight</a><nav><a href="index.html">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></nav></header>
+<main>
+<h1>Support</h1>
+<p class="lede">Help for What's On Tonight on Apple TV.</p>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:kaleapplabs@protonmail.com">kaleapplabs@protonmail.com</a></p>
+<p>Please include your Apple TV model, the app version (Settings, About), and what happened.</p>
+<h2>Getting started</h2>
+<ol>
+<li>You need a <strong>Jellyfin server</strong> with some films or shows in it, reachable from your Apple TV (on your home network, or over the internet or a VPN).</li>
+<li>Open the app and choose <strong>Add server</strong>. Type the address, for example <code>192.168.1.20:8096</code> or <code>https://jellyfin.example.com</code>.</li>
+<li>Choose <strong>Add login</strong> and sign in with your Jellyfin user name and password.</li>
+<li>The app builds your channels. Choose <strong>Play now</strong> to open the guide.</li>
+</ol>
+<h2>Common questions</h2>
+<h2 style="font-size:18px">The app shows no channels.</h2>
+<p>The channels come from your library's genres, studios and people. A channel needs at least a few videos, set by <strong>Settings, Minimum channel size</strong>. Make sure your library has metadata, then choose <strong>Refresh from server</strong>.</p>
+<h2 style="font-size:18px">A video won't play.</h2>
+<p>Choose <strong>Refresh from server</strong>. The app checks every file and lists any it cannot play under <strong>Settings, Skipped files</strong>, with the reason. Some formats are converted by your Jellyfin server, so the server needs enough power to do that.</p>
+<h2 style="font-size:18px">The app can't find my server.</h2>
+<p>Check that the address is right and that your Apple TV can reach the server. Allow the app to find devices on your local network when it asks. A server on plain <code>http://</code> is only allowed on a home network.</p>
+<h2 style="font-size:18px">How do I lock the app?</h2>
+<p>Open <strong>Settings, Security</strong> and set a PIN for the login. The app asks for it when it opens and when you return after being away for a few seconds.</p>
+<h2 style="font-size:18px">Can I hide or merge genres?</h2>
+<p>Yes, with optional settings stored on your own Jellyfin server. See below.</p>
+<h2>Optional server settings</h2>
+<p>By default every genre becomes a channel. To hide genres, merge two into one, or name genres in other languages, store a small block of settings in your Jellyfin user's display preferences, and every device you sign in on will use it.</p>
+<p>The file is JSON with three optional parts:</p>
+<ul>
+<li><code>hiddenGenres</code>: genres that never become channels.</li>
+<li><code>genreMerges</code>: <code>"name to fold": "name to fold it into"</code>.</li>
+<li><code>genreNames</code>: for each language code (<code>es</code>, <code>fr</code>, <code>ja</code>, <code>de</code>), <code>"English name": "name to show"</code>.</li>
+</ul>
+<p>A free loader script and full instructions are available on request through the contact email above. After loading, choose <strong>Refresh from server</strong> in the app.</p>
+<div class="note">What's On Tonight is a player. It contains no videos, and what appears in it comes from your own server. It is not affiliated with or endorsed by Jellyfin.</div>
+</main>
+<footer>&copy; 2026 k.a.l.e. App Labs. What's On Tonight is not affiliated with or endorsed by Jellyfin. Jellyfin is a trademark of its respective owners.</footer></body></html>
